@@ -1,0 +1,39 @@
+[debug] [2024-11-21T21:47:29.182Z] ----------------------------------------------------------------------
+[debug] [2024-11-21T21:47:29.185Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-11-21T21:47:29.185Z] CLI Version:   13.26.0
+[debug] [2024-11-21T21:47:29.185Z] Platform:      win32
+[debug] [2024-11-21T21:47:29.185Z] Node Version:  v20.11.1
+[debug] [2024-11-21T21:47:29.185Z] Time:          Fri Nov 22 2024 03:17:29 GMT+0530 (India Standard Time)
+[debug] [2024-11-21T21:47:29.185Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-21T21:47:29.246Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-21T21:47:29.246Z] > authorizing via signed-in user (chandranshubhardwaj68@gmail.com)
+[debug] [2024-11-21T21:47:29.246Z] [iam] checking project netflixgpt-57a56 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-11-21T21:47:29.247Z] Checked if tokens are valid: false, expires at: 1731007815163
+[debug] [2024-11-21T21:47:29.247Z] Checked if tokens are valid: false, expires at: 1731007815163
+[debug] [2024-11-21T21:47:29.247Z] > refreshing access token with scopes: []
+[debug] [2024-11-21T21:47:29.249Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-21T21:47:29.249Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-21T21:47:30.530Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-11-21T21:47:30.531Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-21T21:47:30.558Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions [none]
+[debug] [2024-11-21T21:47:30.559Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions x-goog-quota-user=projects/netflixgpt-57a56
+[debug] [2024-11-21T21:47:30.559Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-11-21T21:47:32.516Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions 200
+[debug] [2024-11-21T21:47:32.517Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-57a56:testIamPermissions {}
+[debug] [2024-11-21T21:47:32.517Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project netflixgpt-57a56:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2024-11-21T21:47:32.518Z] Checked if tokens are valid: true, expires at: 1732229249531
+[debug] [2024-11-21T21:47:32.518Z] Checked if tokens are valid: true, expires at: 1732229249531
+[debug] [2024-11-21T21:47:32.519Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-57a56 [none]
+[debug] [2024-11-21T21:47:34.118Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-57a56 403
+[debug] [2024-11-21T21:47:34.118Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-57a56 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-11-21T21:47:34.121Z] Request to https://firebase.googleapis.com/v1beta1/projects/netflixgpt-57a56 had HTTP Error: 403, The caller does not have permission
+[debug] [2024-11-21T21:47:35.335Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/netflixgpt-57a56 had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project netflixgpt-57a56. Please make sure the project exists and your account has permission to access it.
